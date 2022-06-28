@@ -3,12 +3,11 @@ var cookiePaser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var path = require('path');
-// const http = require('https');
+const http = require('https');
 
-/*setInterval(function () {
+setInterval(function () {
     http.get('헤로쿠주소');
 }, 600000)    
-    */
 
 var route = require('./routes/route.js')
 
