@@ -773,7 +773,7 @@ footer{
         background: #2a47a6;;
       }
 
-      .top {
+      .top>img {
         display: none;
       }
 }
