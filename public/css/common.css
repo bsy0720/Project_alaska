@@ -612,6 +612,10 @@ footer{
     .disp900{
         display: block;
     }
+    .top {
+        position: fixed;
+        right: 5px;
+    }
     
 
 }
@@ -770,9 +774,8 @@ footer{
       }
 
       .top {
-        position: fixed;
-        right: 5px;
-    }
+        display: none;
+      }
 }
 
 
