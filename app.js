@@ -6,7 +6,7 @@ var path = require('path');
 const http = require('https');
 
 setInterval(function () {
-    http.get('헤로쿠주소');
+    http.get('https://team-alaska.herokuapp.com/');
 }, 600000)    
 
 var route = require('./routes/route.js')
