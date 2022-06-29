@@ -68,7 +68,7 @@ function readNum(num) {
 
 
 
-const CurrencyRatio = {
+const Currency = {
     USD: {
         KRW:1284.23,
         USD:1,
@@ -98,23 +98,23 @@ function convert(type) {
         //입력값 받기
         amount = document.getElementById("s_fromAmount").value;
         //환전하기
-        let convertedAmount = amount * currencyRatio[FromCurrency][ToCurrency];
+        let convertedAmount = amount * Currency[FromCurrency][ToCurrency];
         //환전값 보여주기
         document.getElementById("s_toAmount").value = convertedAmount;
         //환전한값 한국어로
         renderKoreanNumber(amount, convertedAmount);
     } else {
         amount = document.getElementById("s_toAmount").value;
-        let convertedAmount = amount * currencyRatio[ToCurrency][FromCurrency];
+        let convertedAmount = amount * Currency[ToCurrency][FromCurrency];
         document.getElementById("s_fromAmount").value = convertedAmount;
         renderKoreanNumber(convertedAmount, amount);
     }
 }
 function renderKoreanNumber(s_from, s_to) {
     document.getElementById("s_fromNumToKorea").textContent = 
-        readNum(s_from) + currencyRatio[FromCurrency].unit;
+        readNum(s_from) + Currency[FromCurrency].unit;
     document.getElementById("s_toNumToKorea").textContent =
-        readNum(s_to) + currencyRatio[ToCurrency].unit;
+        readNum(s_to) + Currency[ToCurrency].unit;
 }
 function readNum(num) {
     let resultString = "";
