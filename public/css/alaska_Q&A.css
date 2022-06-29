@@ -171,28 +171,25 @@ tbody .imp {
 }
 
 .accordion {
-    background-color: white;
-    color: #000;
     cursor: pointer;
+    padding: 18px;
     width: 100%;
-    border: none;
     text-align: left;
+    border: none;
     outline: none;
-    font-size: 16px;
     transition: 0.4s;
   }
-
-
+  
+    /* Style the accordion panel. Note: hidden by default */
   .panel {
-    width: 100%;
-    padding: 18px 10px;
-    display: none;
+    padding: 0 10px;
     background-color: #e3effd;
+    max-height: 0;
     overflow: hidden;
-    margin-top: 15px;
-    box-sizing: border-box;
+    transition: max-height 0.2s ease-out;
+    margin-top: 10px;
+    border-radius: 3px;
   }
-
 
 @media only screen and (max-width: 900px) {
     .q_table_wrap {

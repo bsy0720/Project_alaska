@@ -33,14 +33,12 @@
                         </thead>
                         <tbody>
                         <% rows.forEach((row, index) => { %>
-                            <tr class="tr_notice">
+                            <tr>
                                 <td class="center imp"><%=row.RNUM%></td>
                                 <td>
                                     <a class="accordion"><%=row.title%></a>
                                     <div class="panel">
-                                        <p>
-                                            <%=row.content%>
-                                        </p>
+                                        <div class="pa"><%=row.content%></div>                            
                                         <div id="b_btn">
                                             <input type="button" onclick="javascript:location.href = '/newQna?id=<%=row.id%>'" value="수정">
                                             <input type="button" onclick="javascript:location.href = '/deleteQna?id=<%=row.id%>'" value="삭제">
@@ -73,7 +71,7 @@
                         </thead>
                         <tbody>
                             <% rows.forEach((row, index) => { %>
-                                <tr class="tr_notice">
+                                <tr>
                                     <td class="center imp"><%= row.RNUM %></td>
                                     <td>
                                         <a class="accordion"><%=row.title%></a>
