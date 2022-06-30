@@ -33,7 +33,7 @@
                             <tbody id="trip_re">
                                 <% rows.forEach((row, index) => { %>
                                 <tr>
-                                    <td class="center thick"><%=row.RNUM%></td>
+                                    <td class="center thick"><%=row.id%></td>
                                     <td><a onclick="javascript:location.href='/trip_review_page?id=<%=row.id%>'"><%=row.title%></a></td>
                                     <td class="center"><%=row.writer%></td>
                                     <td class="center"><%=row.created%></td>

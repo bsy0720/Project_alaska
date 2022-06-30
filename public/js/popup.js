@@ -4,11 +4,6 @@ $(document).ready(function () {
     });
 });
 
-/*$(document).ready(function () {
-    $('.x_btn').click(function () {
-        $('#popup2_wrap').hide();
-    });
-});*/
 
 
  $( document ).ready(function() {

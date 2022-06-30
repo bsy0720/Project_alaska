@@ -1,3 +1,5 @@
+// qna 아코디언
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 

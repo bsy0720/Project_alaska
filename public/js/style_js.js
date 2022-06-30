@@ -30,9 +30,50 @@ window.onscroll = function sticky() {
   }
 }
 
-$(document).ready(function(){
-    mobile_menu();
-});
+
+//chat 탭
+$(function() {
+  var $chat = $('.chat'),
+    $chatbox = $('.chatbox'),
+    $chatc = $('.chat_c');
+
+  $chat.on("click", function() {
+      $chatbox.fadeIn();
+      $chat.hide();
+      
+    })
+  $chatc.on("click", function() {
+        $chatbox.fadeOut();
+        $chat.show();
+      })
+  });
+
+
+   //chat 탭
+   $(function() {
+    var $cfaq = $('.cfaqm'),
+      $ctab = $('.ctabs');
+    $cfaq.on("click", function() {
+        $ctab.toggle(300);
+      })
+    });
+  
+  $(".c_con").hide();
+  $(".ctabs li a").click(function () {
+    $(this).parent().siblings("li").removeClass("active");
+    $(this).parent().addClass("active"); 
+    $(this).parent().parent().parent().parent().parent().find(".c_con").hide();
+    var activeTab = $(this).attr("rel");
+     $("#" + activeTab).fadeIn();
+  });
+  $(".back").click(function(){
+    $(this).parent().fadeOut();
+  })
+ 
+
+
+
+
 //메인1 스와이퍼
 var swiper1 = new Swiper(".mainswiper1", {
   slidesPerView: 1,
@@ -84,6 +125,9 @@ var labswiper = new Swiper(".labswiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+
 
 //여행상품 상단 이미지 탭
 $(".tripbg").hide();
@@ -332,28 +376,7 @@ function mobile_menu(){
     start(); // 시작 호출
 }
 
-//$(function(){
-//  var $firstMenu = $('nav > .main_nav > li '),
-//      $header = $('.header_bottom');
-//      $headers = $('.nav_sub');
-//      $mainNav = $('.main_nav');
-//      $utillNav = $('.utill_nav');
-//  
-//  $firstMenu.mouseenter(function(){
-//  $header.stop().animate({height:'220px'});
-//  $headers.css('display','block');
-//  $mainNav.css('align-items','flex-start');
-//  $utillNav.css('align-items','flex-start');
-//  })
-//  
-//  .mouseleave(function(){
-//  $header.stop().animate({height:'60px'});
-//  $headers.css('display','none');
-//  $mainNav.css('align-items','center');
-//  $utillNav.css('align-items','center');
-//  });
-//
-//});
+
 
 
 
@@ -556,6 +579,8 @@ function joinform_check() {
   function search_address() {
     window.open("", "b", "width=600, height=300, left=200, top=100");
   }
+
+ 
 
 
 

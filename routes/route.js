@@ -243,14 +243,6 @@ router.get('/qna_page', (req, res) => {
 
 
 
-// 여행문의 답댓변
-
-router.get('/qna_page1', (req, res) => {
-    res.render('./sub/alaska_Q&A_page1');
-})
-
-
-
 
 
 
