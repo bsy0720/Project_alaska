@@ -38,7 +38,9 @@
                                 <td>
                                     <a class="accordion"><%=row.title%></a>
                                     <div class="panel">
-                                        <div class="pa"><%=row.content%></div>                            
+                                        <div class="pa">
+                                            <p><%=row.content%></p>
+                                        </div>                            
                                         <div id="b_btn">
                                             <input type="button" onclick="javascript:location.href = '/newQna?id=<%=row.id%>'" value="수정">
                                             <input type="button" onclick="javascript:location.href = '/deleteQna?id=<%=row.id%>'" value="삭제">

@@ -174,9 +174,13 @@
     color: #000;
 }
 
+.pa>p {
+    margin-top: 5px;
+}
+
 #b_btn {
     text-align: right;
-    margin: 10px 5px 0 0;
+    margin-bottom: 5px;
 }
 
 #b_btn>input {
