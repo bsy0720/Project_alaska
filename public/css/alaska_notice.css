@@ -160,7 +160,28 @@ tbody .imp {
     font-weight: bold;
 }
 
-.m_number {
+.off-screen {
+	display: none;
+}
+#nav {
+	width: 500px;
+	text-align: center;
+}
+#nav a {
+	display: inline-block;
+	padding: 3px 5px;
+	margin-right: 10px;
+	font-family:Tahoma;
+	background: #ccc;
+	color: #000;
+	text-decoration: none;
+}
+#nav a.active {
+	background: #333;
+	color: #fff;
+}
+
+/*.m_number {
     width: 100%;
     height: 30px;
     margin-top: 20px;
@@ -196,7 +217,8 @@ tbody .imp {
     border-bottom: 2px solid #1351A5; 
     font-weight: bold;
     margin-right: 10px;
-}
+}*/
+
 .btn_go{
     padding: 10px 20px;
     border: 1px solid #072f49;

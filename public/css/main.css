@@ -391,12 +391,12 @@ section{
     box-sizing: border-box;
 }
 .msec4_box{
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .sub_title{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-sizing: border-box;
 }
 .sub_title>h2{
@@ -405,9 +405,9 @@ section{
     font-weight: 900;
 }
 .sub_title>a{
-    padding: 10px 15px ;
+    padding: 5px 10px ;
     font-weight: bold;
-    border: 1px solid #072f49;
+    border: 2px solid #072f49;
     border-radius: 6px;
     font-size: 14px;
     color: #072f49;
@@ -448,7 +448,7 @@ section{
 }
 .notice_wrap a{
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 2px 10px;
     box-sizing: border-box;
     display: block;
     font-size: 16px;
@@ -712,8 +712,6 @@ section{
 .youtube_text>strong{
     font-size: 18px;
     font-weight: bold;
-    padding-left: 10px;
-    box-sizing: border-box;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -724,8 +722,6 @@ section{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding-left: 10px;
-    box-sizing: border-box;
 }
 
       /* Fading animation */
@@ -861,9 +857,18 @@ section{
     box-sizing: border-box;
   }
 
+  .cc_con>p {
+    margin-bottom: 10px;
+  }
+
   .same-icon {
     line-height: 150px;
     padding: 0 20px;
+  }
+
+  .ma_same-icon {
+    line-height: 90px;
+    text-align: center;
   }
 
   .currency-box {

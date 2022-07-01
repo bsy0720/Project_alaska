@@ -49,15 +49,9 @@ $(function() {
   });
 
 
+
    //chat 탭
-   $(function() {
-    var $cfaq = $('.cfaqm'),
-      $ctab = $('.ctabs');
-    $cfaq.on("click", function() {
-        $ctab.toggle(300);
-      })
-    });
-  
+    
   $(".c_con").hide();
   $(".ctabs li a").click(function () {
     $(this).parent().siblings("li").removeClass("active");
@@ -69,6 +63,25 @@ $(function() {
   $(".back").click(function(){
     $(this).parent().fadeOut();
   })
+
+
+  $(".cc_con").hide();
+  $(".ctab_con").each(function () {
+    $(this).children(".cctabs li:first").addClass("active"); //Activate first tab
+    $(this).children(".chome").first().show();
+  });
+
+  $(".cctabs li a").click(function () {
+    $(this).parent().siblings("li").removeClass("active");
+    $(this).parent().addClass("active"); 
+    $(this).parent().parent().parent().parent().parent().find(".cc_con").hide();
+    var activeTab = $(this).attr("rel");
+     $("#" + activeTab).fadeIn();
+  });
+  $(".back").click(function(){
+    $(this).parent().fadeOut();
+  })
+
  
 
 
@@ -125,6 +138,126 @@ var labswiper = new Swiper(".labswiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//가격더하기
+
+$(document).ready(function () {
+  // Set eBook input state to checked so we can access its value
+  $("#ebook-radio").attr("checked", "checked");
+
+  // hide order summary line items
+  $("#li-audiobook").hide();
+  $("#li-bump-offer").hide();
+
+  // Set element variables
+  var $radioOptionContainer = $(".radio-option-container");
+  var $radioOption = $(".radio-option");
+  var $ebookRadioContainer = $("#ebook-radio-container");
+  var $ebookRadio = $("#ebook-radio");
+  // const $ebookRadio = $("#pid-3727024-0");
+  var $audiobookRadio = $("#audiobook-radio");
+  // const $audiobookRadio = $("#pid-3728625-0");
+  var $checkboxOffer = $("#bump-offer");
+  var $btnBumpOffer = $("#aadtomyOrder");
+  var $audiobookLineItem = $("#li-audiobook");
+  var $bumpOfferLineItem = $("#li-bump-offer");
+  var $subtotalValue = $("#subtotalValue");
+  var $totalValue = $("#totalValue");
+
+  // give active radio option a green border
+  $radioOption.change(function () {
+    $radioOptionContainer.removeClass("active");
+
+    if ($(this).prop("checked", true)) {
+      $(this).parent().addClass("active");
+    } else {
+      $radioOptionContainer.removeClass("active");
+    }
+  });
+
+  // calculate totals
+  function calculateTotals() {
+    let totalAmount = parseFloat(1790.00);
+    var audiobookPrice = parseFloat(1455.00);
+    var bumpOfferPrice = parseFloat(45);
+
+    if ($audiobookRadio.is(":checked")) {
+      totalAmount = parseFloat(3245.00);
+      console.log("Total: " + totalAmount);
+      $subtotalValue.html("$" + totalAmount);
+      $totalValue.html("$" + totalAmount);
+    } else {
+      totalAmount = +totalAmount + -9.97;
+    }
+
+    if (
+      $ebookRadio.is(":checked") ||
+      ($ebookRadio.is(":checked") && !$checkboxOffer.is(":checked"))
+    ) {
+      totalAmount = "1790";
+      $("#subtotalValue, #totalValue").html("$" + totalAmount);
+    } else {
+      totalAmount = +totalAmount;
+    }
+
+    if ($checkboxOffer.is(":checked")) {
+      totalAmount = parseFloat(totalAmount) + parseFloat(45);
+      $("#subtotalValue, #totalValue").html("$" + totalAmount);
+    }
+  }
+
+  $ebookRadio.click(function () {
+    if ($(this).is(":checked")) {
+      $audiobookLineItem.hide();
+    } else {
+      $audiobookLineItem.show();
+    }
+
+    calculateTotals();
+  });
+
+  $audiobookRadio.click(function () {
+    if ($(this).is(":checked")) {
+      $audiobookLineItem.show();
+    } else {
+      $audiobookLineItem.hide();
+    }
+
+    calculateTotals();
+  });
+
+  $checkboxOffer.click(function () {
+    if ($(this).is(":checked")) {
+      $bumpOfferLineItem.show();
+      $btnBumpOffer.trigger("change");
+    } else {
+      $bumpOfferLineItem.hide();
+    }
+
+    calculateTotals();
+  });
+
+  $btnBumpOffer.click(function () {
+    $checkboxOffer.trigger("click");
+  });
+
+  $checkboxOffer.on("change", function () {
+    if (!$checkboxOffer.checked) {
+      $checkboxOffer.attr("checked", "checked");
+    } else {
+      $checkboxOffer.attr("checked", false);
+    }
+  });
+
+  $btnBumpOffer.on("change", function () {
+    if (!$btnBumpOffer.text == "Added To Your Order") {
+      $btnBumpOffer.text = "Added To Your Order";
+    } else {
+      $btnBumpOffer.text = "Yes! Add To My Order";
+    }
+  });
+});
+
 
 
 

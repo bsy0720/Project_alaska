@@ -1,5 +1,7 @@
 // qna 아코디언
 
+const { render } = require("ejs");
+
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -20,3 +22,4 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+

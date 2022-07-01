@@ -472,8 +472,8 @@ footer{
 
 .top {
     position: fixed;
-    right: 60px;
-    bottom: 50px;
+    right: 5px;
+    bottom: 30px;
     display: none;
     z-index: 99;   
   }
@@ -485,8 +485,8 @@ footer{
 
   .chat {
     position: fixed;
-    right: 60px;
-    bottom: 115px;
+    right: 5px;
+    bottom: 100px;
     display: block;
     z-index: 99;   
     cursor: pointer;
@@ -495,8 +495,8 @@ footer{
     width: 55px;
     height: 55px;
   }
-
-  .chatbox{
+  
+.chatbox{
     display: none;
     width: 370px;
     height: 580px;
@@ -506,7 +506,7 @@ footer{
     right:60px;
     bottom: 100px;
     z-index: 9999;
-    border-radius: 20px;
+    border-radius: 40px;
     padding: 30px 20px;
     box-sizing: border-box;
     box-shadow: rgb(0 0 0 / 10%) 0px 2px 16px 1px;
@@ -514,13 +514,22 @@ footer{
 .chat_h{
     box-sizing: border-box;
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    background-color: #072f49;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    border-radius: 40px 40px 0 0;
+    padding: 0 20px;
 }
 .chat_h{
     font-size: 18px;
     font-weight: 700;
+    color: #fff;
 }
 .chat_h>img{
     width: 30px;
@@ -532,6 +541,8 @@ footer{
     cursor: pointer;
 }
 .chat_m{
+    top: 30px;
+    height: 440px;
     position: relative;
     padding: 10px 15px;
     overflow: hidden;
@@ -612,9 +623,7 @@ footer{
     box-sizing: border-box;
     margin-left: -15px;
   }
-  .ctabs{
-    display: none;
-  }
+
   .cfaqm{
     font-size: 14px !important;
   }
@@ -637,6 +646,29 @@ footer{
     text-align: right;
     font-weight: 700;
     margin-top: 20px;
+    cursor: pointer;
+  }
+  .chat_f{
+    width: 100%;
+    margin-left: -20px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    background-color: #072f49;
+    border-radius: 0 0 40px 40px;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  .chat_f>ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat_f>ul>li>a{
+    text-align: center;
+    color: #EDBD03;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
   }
 
@@ -771,7 +803,14 @@ footer{
     .top {
         position: fixed;
         right: 5px;
+        bottom: 30px;
     }
+
+    .chat {
+        bottom: 100px;
+        right: 5px;
+        
+      }
     
 
 }
@@ -933,9 +972,10 @@ footer{
         display: none;
       }
 
-      .chat {
-        right: 5px;
-      }
+    .chat {
+        bottom: 30px;
+    }
+      
     .chatbox{
         right:5px;
     }

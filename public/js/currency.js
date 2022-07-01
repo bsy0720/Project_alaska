@@ -132,6 +132,73 @@ function readNum(num) {
     return resultString;
 };
 
+const maCurrency = {
+    USD: {
+        KRW:1284.23,
+        USD:1,
+        unit:"달러",
+        img: "https://cdn-icons-png.flaticon.com/512/555/555526.png",
+    },
+    KRW: {
+        KRW:1,
+        USD:0.00078,
+        unit:"원",
+        img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
+    },
+};
+var ma_unitWords = ["", "만", "억", "조", "경"];
+var ma_splitUnit = 10000;
+let maToButton = document.querySelector("#ma_to-button");
+let maFromButton = document.querySelector("#ma_from-button");
+let maFromCurrency = 'KRW';
+let maToCurrency = 'USD';
+
+
+
+function ma_convert(type) {
+    console.log("here");
+    let ma_amount = 0;
+    if (type == "ma_from") {
+        //입력값 받기
+        ma_amount = document.querySelector("#ma_fromAmount").value;
+        //환전하기
+        let convertedAmount = ma_amount * maCurrency[maFromCurrency][maToCurrency];
+        //환전값 보여주기
+        document.querySelector("#ma_toAmount").value = convertedAmount;
+        //환전한값 한국어로
+        ma_renderKoreanNumber(ma_amount, convertedAmount);
+    } else {
+        ma_amount = document.querySelector("#ma_toAmount").value;
+        let convertedAmount = amount * maCurrency[maToCurrency][maFromCurrency];
+        document.querySelector("#ma_fromAmount").value = convertedAmount;
+        ma_renderKoreanNumber(convertedAmount, ma_amount);
+    }
+}
+function ma_renderKoreanNumber(ma_from, ma_to) {
+    document.querySelector("#ma_fromNumToKorea").textContent = 
+        ma_readNum(ma_from) + maCurrency[maFromCurrency].unit;
+    document.querySelector("#ma_toNumToKorea").textContent =
+        ma_readNum(ma_to) + maCurrency[maToCurrency].unit;
+}
+function ma_readNum(num) {
+    let resultString = "";
+    let resultArray = [];
+    for (let i = 0; i < ma_unitWords.length; i++) {
+        let unitResult =
+         (num % Math.pow(ma_splitUnit, i + 1)) / Math.pow(ma_splitUnit, i);
+        unitResult = Math.floor(unitResult);
+        if (unitResult > 0) {
+        resultArray[i] = unitResult;    
+        }
+    }
+    for (let i = 0; i < resultArray.length; i++) {
+        if (!resultArray[i]) continue;
+        resultString = String(resultArray[i]) + ma_unitWords[i] + resultString;
+    }
+    return resultString;
+};
+
+
 
 
 
