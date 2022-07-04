@@ -1,10 +1,10 @@
-.subpg_sec h1{
+.subpg_sec h1 {
     font-size: 28px;
     font-weight: 900;
     text-align: center;
 }
 
-.sub_visual .map2{
+.sub_visual .map2 {
     background-image: url(../img/sub_trip_review/youtube_ban.jpg);
 }
 
@@ -92,16 +92,16 @@
 .trip_num .n_left {
     display: block;
     background: url('../img/sub_trip_review/icon_pagination.png') no-repeat -50px -60px;
-	width: 30px;
-	height: 30px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     right: 52%;
 }
 
 .trip_num .n_right {
     background: url('../img/sub_trip_review/icon_pagination.png') no-repeat -120px -60px;
-	width: 30px;
-	height: 30px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     left: 52%;
 }
@@ -126,7 +126,7 @@
 
     table {
         width: 100%;
-    } 
+    }
 
     .trip_re_table_wrap {
         display: none;
@@ -148,7 +148,7 @@
     #mb_trip_re_table_wrap tbody>tr>.thick {
         font-weight: bold;
     }
-    
+
     #mb_trip_re_table_wrap tbody>tr>td {
         background: #fff;
         border: none;

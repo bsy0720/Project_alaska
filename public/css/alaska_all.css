@@ -1,23 +1,17 @@
-.subpg_sec h1{
+.subpg_sec h1 {
     font-size: 28px;
     font-weight: 900;
     text-align: center;
 }
 
-.sub_visual .bgin{
+.sub_visual .bgin {
     background-image: url(../img/sub_intro/banimg.jpg)
 }
 
-#sidemenu ul .navy a{
+#sidemenu ul .navy a {
     color: #edbd03;
     background: #072f49 url(../img/logo/smenu_bg_ov.png) no-repeat right 10px center;
 }
-
-/*#sidemenu ul .on a {
-    background-color: #fff;
-    color: #676767;
-    background: none;
-}*/
 
 .all_txtbox1 {
     width: 100%;
@@ -80,13 +74,13 @@
 }
 
 #all_txtbox3-1>div {
-    width: calc(100% - 10px / 2);  
+    width: calc(100% - 10px / 2);
     height: auto;
     display: flex;
 }
 
 #all_txtbox3-1 .img1 {
-    width: 100%;  
+    width: 100%;
     background: url(../img/sub_alaska_all/alaska_b4.jpg) no-repeat center center;
     background-size: cover;
     margin-right: 20px;
@@ -233,8 +227,8 @@
     padding: 10px 0;
     box-sizing: border-box;
     border-left: 1px solid #ededed;
-    text-align: center; 
-    font-size: 15px;  
+    text-align: center;
+    font-size: 15px;
 }
 
 
@@ -262,9 +256,9 @@
         width: 100%;
     }
 
-    
 
- 
+
+
 }
 
 @media only screen and (max-width: 720px) {
@@ -312,8 +306,15 @@
         background-size: 30px;
     }
 
-    .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9 {
+    .box2,
+    .box3,
+    .box4,
+    .box5,
+    .box6,
+    .box7,
+    .box8,
+    .box9 {
         margin-top: 40px;
     }
-  
+
 }

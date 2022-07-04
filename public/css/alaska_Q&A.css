@@ -1,10 +1,10 @@
-.subpg_sec h1{
+.subpg_sec h1 {
     font-size: 28px;
     font-weight: 900;
     text-align: center;
 }
 
-.sub_visual .orora{
+.sub_visual .orora {
     background-image: url(../img/sub_notice/orora.jpg);
     background-position: center center;
     background-size: 100%;
@@ -14,11 +14,11 @@
 .main_t_wrap {
     width: 100%;
     height: 37px;
-    margin-bottom: 20px;  
+    margin-bottom: 20px;
 }
 
 .main_t_wrap>a {
-    color: #072F49; 
+    color: #072F49;
     width: 80px;
     height: 37px;
     line-height: 37px;
@@ -27,7 +27,7 @@
     border-radius: 6px;
     float: right;
     cursor: pointer;
-    font-size: 14px;  
+    font-size: 14px;
 }
 
 .main_t_wrap>a:hover {
@@ -39,55 +39,67 @@
 .n_table>table {
     width: 100%;
 }
-.qtable_wrap{ 
+
+.qtable_wrap {
     width: 100%;
 }
-.qhead{
+
+.qhead {
     display: flex;
 }
-.qhead>div{
+
+.qhead>div {
     width: 10%;
     padding: 10px;
     box-sizing: border-box;
     font-size: 16px;
     text-align: center;
 }
-.qhead>div:first-child{
+
+.qhead>div:first-child {
     width: 5%;
 }
-.qhead>div:nth-child(2){
+
+.qhead>div:nth-child(2) {
     width: 75%;
 }
-.qbody>.qna{
+
+.qbody>.qna {
     display: flex;
 }
-.qbody>.qna>div{
+
+.qbody>.qna>div {
     width: 10%;
     padding: 10px;
     box-sizing: border-box;
     font-size: 16px;
     text-align: center;
 }
-.qbody>.qna>div:first-child{
+
+.qbody>.qna>div:first-child {
     width: 5%;
 }
-.qbody>.qna>div:nth-child(2){
+
+.qbody>.qna>div:nth-child(2) {
     width: 75%;
     text-align: left;
 }
-.ans{
+
+.ans {
     display: none;
     padding: 20px 40px;
     box-sizing: border-box;
 }
-.qtitle{
+
+.qtitle {
     cursor: pointer;
 }
 
-.in{
+.in {
     width: 100%;
     display: block;
 }
+
 thead>tr {
     border-top: 2px solid #2A47A6;
 }
@@ -133,16 +145,16 @@ tbody .imp {
 
 .m_b_number .n_left {
     background: url('../img/sub_Q&A/icon_pagination.png') no-repeat -50px -60px;
-	width: 30px;
-	height: 30px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     right: 56%;
 }
 
 .m_b_number .n_right {
     background: url('../img/sub_Q&A/icon_pagination.png') no-repeat -120px -60px;
-	width: 30px;
-	height: 30px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     left: 56%;
 }
@@ -154,7 +166,7 @@ tbody .imp {
 
 .m_b_number .b_number {
     color: #1351A5;
-    border-bottom: 2px solid #1351A5; 
+    border-bottom: 2px solid #1351A5;
     margin-right: 10px;
 }
 
@@ -178,10 +190,10 @@ tbody .imp {
     border: none;
     outline: none;
     transition: 0.4s;
-  }
-  
-    /* Style the accordion panel. Note: hidden by default */
-  .panel {
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
     padding: 0 10px;
     background-color: #e3effd;
     max-height: 0;
@@ -189,12 +201,13 @@ tbody .imp {
     transition: max-height 0.2s ease-out;
     margin-top: 10px;
     border-radius: 3px;
-  }
+}
 
 @media only screen and (max-width: 900px) {
     .q_table_wrap {
         display: none;
     }
+
     .mb_n_table_wrap {
         display: block;
     }
@@ -206,7 +219,7 @@ tbody .imp {
 }
 
 @media only screen and (max-width: 720px) {
-    
+
     .n_select {
         font-size: 14px;
     }
@@ -215,7 +228,7 @@ tbody .imp {
         font-size: 13px;
     }
 
-    
+
     thead th {
         font-size: 14px;
     }

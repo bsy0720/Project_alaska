@@ -1,14 +1,14 @@
 const currencyRatio = {
     USD: {
-        KRW:1284.23,
-        USD:1,
-        unit:"달러",
+        KRW: 1284.23,
+        USD: 1,
+        unit: "달러",
         img: "https://cdn-icons-png.flaticon.com/512/555/555526.png",
     },
     KRW: {
-        KRW:1,
-        USD:0.00078,
-        unit:"원",
+        KRW: 1,
+        USD: 0.00078,
+        unit: "원",
         img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
     },
 };
@@ -38,21 +38,23 @@ function M_convert(type) {
         M_renderKoreanNumber(M_convertedAmount, amount);
     }
 }
+
 function M_renderKoreanNumber(from, to) {
-    document.getElementById("fromNumToKorea").textContent = 
+    document.getElementById("fromNumToKorea").textContent =
         M_readNum(from) + currencyRatio[fromCurrency].unit;
     document.getElementById("toNumToKorea").textContent =
         M_readNum(to) + currencyRatio[toCurrency].unit;
 }
+
 function M_readNum(num) {
     let resultString = "";
     let resultArray = [];
     for (let i = 0; i < unitWords.length; i++) {
         let unitResult =
-         (num % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
+            (num % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
         unitResult = Math.floor(unitResult);
         if (unitResult > 0) {
-        resultArray[i] = unitResult;    
+            resultArray[i] = unitResult;
         }
     }
     for (let i = 0; i < resultArray.length; i++) {
@@ -68,15 +70,15 @@ function M_readNum(num) {
 
 const Currency = {
     USD: {
-        KRW:1284.23,
-        USD:1,
-        unit:"달러",
+        KRW: 1284.23,
+        USD: 1,
+        unit: "달러",
         img: "https://cdn-icons-png.flaticon.com/512/555/555526.png",
     },
     KRW: {
-        KRW:1,
-        USD:0.00078,
-        unit:"원",
+        KRW: 1,
+        USD: 0.00078,
+        unit: "원",
         img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
     },
 };
@@ -108,21 +110,23 @@ function convert(type) {
         renderKoreanNumber(convertedAmount, amount);
     }
 }
+
 function renderKoreanNumber(s_from, s_to) {
-    document.querySelector("#s_fromNumToKorea").textContent = 
+    document.querySelector("#s_fromNumToKorea").textContent =
         readNum(s_from) + Currency[FromCurrency].unit;
     document.querySelector("#s_toNumToKorea").textContent =
         readNum(s_to) + Currency[ToCurrency].unit;
 }
+
 function readNum(num) {
     let resultString = "";
     let resultArray = [];
     for (let i = 0; i < unitWords.length; i++) {
         let unitResult =
-         (num % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
+            (num % Math.pow(splitUnit, i + 1)) / Math.pow(splitUnit, i);
         unitResult = Math.floor(unitResult);
         if (unitResult > 0) {
-        resultArray[i] = unitResult;    
+            resultArray[i] = unitResult;
         }
     }
     for (let i = 0; i < resultArray.length; i++) {
@@ -134,15 +138,15 @@ function readNum(num) {
 
 const maCurrency = {
     USD: {
-        KRW:1284.23,
-        USD:1,
-        unit:"달러",
+        KRW: 1284.23,
+        USD: 1,
+        unit: "달러",
         img: "https://cdn-icons-png.flaticon.com/512/555/555526.png",
     },
     KRW: {
-        KRW:1,
-        USD:0.00078,
-        unit:"원",
+        KRW: 1,
+        USD: 0.00078,
+        unit: "원",
         img: "https://cdn.countryflags.com/thumbs/south-korea/flag-400.png",
     },
 };
@@ -174,21 +178,23 @@ function ma_convert(type) {
         ma_renderKoreanNumber(convertedAmount, ma_amount);
     }
 }
+
 function ma_renderKoreanNumber(ma_from, ma_to) {
-    document.querySelector("#ma_fromNumToKorea").textContent = 
+    document.querySelector("#ma_fromNumToKorea").textContent =
         ma_readNum(ma_from) + maCurrency[maFromCurrency].unit;
     document.querySelector("#ma_toNumToKorea").textContent =
         ma_readNum(ma_to) + maCurrency[maToCurrency].unit;
 }
+
 function ma_readNum(num) {
     let resultString = "";
     let resultArray = [];
     for (let i = 0; i < ma_unitWords.length; i++) {
         let unitResult =
-         (num % Math.pow(ma_splitUnit, i + 1)) / Math.pow(ma_splitUnit, i);
+            (num % Math.pow(ma_splitUnit, i + 1)) / Math.pow(ma_splitUnit, i);
         unitResult = Math.floor(unitResult);
         if (unitResult > 0) {
-        resultArray[i] = unitResult;    
+            resultArray[i] = unitResult;
         }
     }
     for (let i = 0; i < resultArray.length; i++) {
@@ -197,13 +203,3 @@ function ma_readNum(num) {
     }
     return resultString;
 };
-
-
-
-
-
-
-
-
-
-

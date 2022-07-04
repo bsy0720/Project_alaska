@@ -1,51 +1,51 @@
-.subpg_sec h1{
+.subpg_sec h1 {
     font-size: 28px;
     font-weight: 900;
     text-align: center;
 }
 
-.sub_visual .orora{
+.sub_visual .orora {
     background-image: url(../img/sub_notice_page/orora.jpg)
 }
 
- #main_t_btn_wrap {
-     width: 100%;
-     height: 37px;
-     line-height: 37px;
-     padding: 0;
- }
+#main_t_btn_wrap {
+    width: 100%;
+    height: 37px;
+    line-height: 37px;
+    padding: 0;
+}
 
- #main_t_btn {
+#main_t_btn {
     display: block;
-     float: right;
-     width: 80px;
-     height: 37px;
-     background-color: transparent;
-     border-radius: 3px;
-     text-align: center;
-     border: 1px solid #072F49;
- }
+    float: right;
+    width: 80px;
+    height: 37px;
+    background-color: transparent;
+    border-radius: 3px;
+    text-align: center;
+    border: 1px solid #072F49;
+}
 
- #main_t_btn>a {
+#main_t_btn>a {
     display: block;
-     color: #072F49;
-     font-size: 14px;  
- }
+    color: #072F49;
+    font-size: 14px;
+}
 
- #main_t_btn>a:hover {
+#main_t_btn>a:hover {
     background-color: #072F49;
     color: #fff;
- }
+}
 
- #np_table_wrap {
+#np_table_wrap {
     padding: 20px 0;
- }
+}
 
- #np_table {
-     width: 100%;
- }
+#np_table {
+    width: 100%;
+}
 
- thead .n_blue {
+thead .n_blue {
     border-top: 1px solid #000;
     border-bottom: 1px solid #e5e5e5;
     padding: 10px 0;
@@ -56,70 +56,70 @@
     letter-spacing: -0.1em;
     text-align: center;
     font-size: 18px;
- }
+}
 
- tbody #txt_box {
+tbody #txt_box {
     padding: 20px 10px 0 10px;
     background: #ffffff;
     text-align: left;
- }
+}
 
- tbody #txt_box>p {
-     margin: 10px 0;
- }
+tbody #txt_box>p {
+    margin: 10px 0;
+}
 
- tbody #txt_box .point {
-     font-weight: bold;
- }
- 
- tbody .info_wrap {
-     display: flex;
-     border-bottom: 1px solid #ddd;
-     padding-top: 10px;
-     padding-bottom: 10px;
- }
+tbody #txt_box .point {
+    font-weight: bold;
+}
 
- tbody .info_wrap>dl {
-     display: flex;
- }
+tbody .info_wrap {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
- tbody .info {
+tbody .info_wrap>dl {
+    display: flex;
+}
+
+tbody .info {
     float: left;
     margin: 0;
     padding-left: 3px;
     letter-spacing: -0.5px;
- }
+}
 
- tbody .info>dt {
+tbody .info>dt {
     float: left;
     color: #737373;
- }
+}
 
- tbody .space {
-     padding-left: 20px;
- }
+tbody .space {
+    padding-left: 20px;
+}
 
 
- tbody .info>dd {
+tbody .info>dd {
     float: left;
     background: transparent url(../img/sub_notice_page/view_bar.gif) no-repeat scroll 0 45%;
     display: inline;
     margin-left: 6px;
     padding-left: 6px;
- }
+}
 
- tbody .txt_box>p {
-     margin: 10px 0;
-     padding-left: 3px;
- }
+tbody .txt_box>p {
+    margin: 10px 0;
+    padding-left: 3px;
+}
 
- tbody .txt_box>p>.point {
-     font-weight: bold;
- }
+tbody .txt_box>p>.point {
+    font-weight: bold;
+}
 
- tbody .txt_box>.point1 {
-     font-weight: bold;
- }
+tbody .txt_box>.point1 {
+    font-weight: bold;
+}
 
 #np_b_txtbox {
     width: 100%;
@@ -192,9 +192,7 @@
 
 
 
-@media only screen and (max-width: 900px) {
-   
-}
+@media only screen and (max-width: 900px) {}
 
 @media only screen and (max-width: 720px) {
     thead .n_blue {
@@ -217,7 +215,7 @@
     .np_b_up>p {
         font-size: 14px;
     }
-    
+
     .np_b_up a {
         font-size: 14px;
     }

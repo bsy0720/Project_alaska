@@ -11,7 +11,7 @@
         </div>
         <div class="write_t_wrap">
             <a href="alaska_Q&A">목록</a>
-        </div> 
+        </div>
         <div class="answer">
             <h3>문의하시기 전 확인해 주세요.</h3>
         </div>
@@ -22,9 +22,9 @@
             </ul>
         </div>
         <% if(typeof errs !== 'undefined') { %>
-            <% errs.forEach(() => { %>
-                <h3><%err.param%> : <%=err.msg%></h3>
-            <%})%>
+        <% errs.forEach(() => { %>
+        <h3><%err.param%> : <%=err.msg%></h3>
+        <%})%>
         <%}%>
         <form class="write_table" method="POST" action="aQna">
             <table border="1" id="w_table">

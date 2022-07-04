@@ -1,151 +1,155 @@
+<div class="sub_visual">
+    <div class="bg orora">
+        <p class="title">고객센터</p>
+        <p class="txt">내가 꿈꾸던 여행지를 현실에서 만나세요!</p>
+    </div>
+</div>
+<div class="w1200 content_box">
+    <div id="content">
+        <div class="subpg_title_wrap">
+            <h2 class="subpg_title">여행상품 Q&A</h2>
+        </div>
+        <div class="main_t_wrap">
+            <a href="./alaska_Q&A_write">글쓰기</a>
+        </div>
 
-    <div class="sub_visual">
-        <div class="bg orora">
-            <p class="title">고객센터</p>
-            <p class="txt">내가 꿈꾸던 여행지를 현실에서 만나세요!</p>
-        </div>
-    </div>
-    <div class="w1200 content_box">
-        <div id="content">
-            <div class="subpg_title_wrap">
-                <h2 class="subpg_title">여행상품 Q&A</h2>
-            </div>
-            <div class="main_t_wrap">
-                <a href="./alaska_Q&A_write">글쓰기</a>
-            </div>
-            
-            <div class="q_table_wrap">
-                <div class="n_table">
-                    <table border="1">
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:auto">
-                            <col style="width:100px">
-                            <col style="width:150px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">글쓴이</th>
-                                <th scope="col">작성일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+        <div class="q_table_wrap">
+            <div class="n_table">
+                <table border="1">
+                    <colgroup>
+                        <col style="width:100px">
+                        <col style="width:auto">
+                        <col style="width:100px">
+                        <col style="width:150px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">글쓴이</th>
+                            <th scope="col">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                         <% rows.forEach((row, index) => { %>
-                            <tr>
-                                <td class="center imp"><%=row.RNUM%></td>
-                                <td>
-                                    <a class="accordion"><%=row.title%></a>
-                                    <div class="panel">
-                                        <div class="pa">
-                                            <p><%=row.content%></p>
-                                        </div>                            
-                                        <div id="b_btn">
-                                            <input type="button" onclick="javascript:location.href = '/newQna?id=<%=row.id%>'" value="수정">
-                                            <input type="button" onclick="javascript:location.href = '/deleteQna?id=<%=row.id%>'" value="삭제">
-                                        </div>  
+                        <tr>
+                            <td class="center imp"><%=row.RNUM%></td>
+                            <td>
+                                <a class="accordion"><%=row.title%></a>
+                                <div class="panel">
+                                    <div class="pa">
+                                        <p><%=row.content%></p>
                                     </div>
-                                </td>                         
-                                <td class="center"><%= row.writer %></td>
-                                <td class="center"><%= row.created %></td>       
-                            </tr>
-                            <% }) %>
-                            
-                        </tbody>    
-                    </table>
-                </div>
+                                    <div id="b_btn">
+                                        <input type="button"
+                                            onclick="javascript:location.href = '/newQna?id=<%=row.id%>'" value="수정">
+                                        <input type="button"
+                                            onclick="javascript:location.href = '/deleteQna?id=<%=row.id%>'" value="삭제">
+                                        </input>
+                                    </div>
+                            </td>
+                            <td class="center"><%= row.writer %></td>
+                            <td class="center"><%= row.created %></td>
+                        </tr>
+                        <% }) %>
+
+                    </tbody>
+                </table>
             </div>
-            <div class="mb_n_table_wrap">
-                <div class="mb_n_table">
-                    <table border="1">
-                        <colgroup>
-                            <col style="width:100px">
-                            <col style="width:auto">
-                            <col style="width:150px">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th scope="col">번호</th>
-                                <th scope="col">제목</th>
-                                <th scope="col">작성일</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <% rows.forEach((row, index) => { %>
-                                <tr>
-                                    <td class="center imp"><%= row.RNUM %></td>
-                                    <td>
-                                        <a class="accordion"><%=row.title%></a>
-                                        <div class="panel">
-                                            <p><%=row.content%></p>
-                                        </div>
-                                    </td>                                    
-                                    <td class="center"><%= row.created %></td>
-                                </tr>
-                                <% }) %>
-                        </tbody>    
-                    </table>
-                </div>
+        </div>
+        <div class="mb_n_table_wrap">
+            <div class="mb_n_table">
+                <table border="1">
+                    <colgroup>
+                        <col style="width:100px">
+                        <col style="width:auto">
+                        <col style="width:150px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% rows.forEach((row, index) => { %>
+                        <tr>
+                            <td class="center imp"><%= row.RNUM %></td>
+                            <td>
+                                <a class="accordion"><%=row.title%></a>
+                                <div class="panel">
+                                    <p><%=row.content%></p>
+                                </div>
+                            </td>
+                            <td class="center"><%= row.created %></td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
             </div>
-            
-            
-            <div class="m_b_number">
-                <a href="#" class="n_left"></a>
-                <a href="#" class="b_number">1</a>
-                <a href="#">2</a>
-                <a href="#" class="n_right"></a>
-            </div>    
+        </div>
+
+
+        <div class="m_b_number">
+            <a href="#" class="n_left"></a>
+            <a href="#" class="b_number">1</a>
+            <a href="#">2</a>
+            <a href="#" class="n_right"></a>
         </div>
     </div>
-    
-    <a href="#" class="top">
-        <img src="../img\logo\b_top.png">
-    </a>
-    <div class="side_quick_menu">
-        <div class="side_curr">
-            <div class="s_currency-box">
-                <div class="s_dropdown">
-                    <button class="s_dropbtn" id="s_from-button"><img class="flag-img"
-                            src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</button>
-                    <ul class="dropdown-content" id="s_from-currency-list">
-                        <li id="s_KRW"><img class="flag-img"
-                                src="	https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</li>
-                        <li id="s_USD"><img class="flag-img" src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</li>
-                    </ul>
-                </div>
-                <div class="s_input-box">
-                    <input type="text" class="amount-box" id="s_fromAmount" onkeyup="convert('s_from')" placeholder="금액을 입력하세요" />
-                    <div id="s_fromNumToKorea" class="korean-num">원</div>
-                </div>                
+</div>
+
+<a href="#" class="top">
+    <img src="../img\logo\b_top.png">
+</a>
+<div class="side_quick_menu">
+    <div class="side_curr">
+        <div class="s_currency-box">
+            <div class="s_dropdown">
+                <button class="s_dropbtn" id="s_from-button"><img class="flag-img"
+                        src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</button>
+                <ul class="dropdown-content" id="s_from-currency-list">
+                    <li id="s_KRW"><img class="flag-img"
+                            src="	https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</li>
+                    <li id="s_USD"><img class="flag-img"
+                            src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</li>
+                </ul>
             </div>
-            <div class="s_same-icon">
-                ⇵
-            </div>
-            <div class="s_currency-box">
-                <div class="s_dropdown">
-                    <button class="s_dropbtn" id="s_to-button"><img class="flag-img"
-                            src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</button>
-                    <ul class="dropdown-content" id="s_to-currency-list">
-                        <li id="s_KRW"><img class="flag-img"
-                                src="	https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</li>
-                        <li id="s_USD"><img class="flag-img" src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</li>
-                    </ul>
-                </div>
-                <div class="s_input-box">
-                    <input type="text" class="amount-box" id="s_toAmount" onkeyup="convert('s_to')" placeholder="금액을 입력하세요" />
-                    <div id="s_toNumToKorea" class="korean-num">달러</div>
-                </div>
+            <div class="s_input-box">
+                <input type="text" class="amount-box" id="s_fromAmount" onkeyup="convert('s_from')"
+                    placeholder="금액을 입력하세요" />
+                <div id="s_fromNumToKorea" class="korean-num">원</div>
             </div>
         </div>
-        <div class="side_weather">
-            <div class="l_box">
-                <div class="s_CurrIcon"></div>
-            </div>       
-            <div class="r_box">
-                <div class="s_CurrTemp"></div>
-                <div class="s_city"></div>
-            </div>    
+        <div class="s_same-icon">
+            ⇵
+        </div>
+        <div class="s_currency-box">
+            <div class="s_dropdown">
+                <button class="s_dropbtn" id="s_to-button"><img class="flag-img"
+                        src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</button>
+                <ul class="dropdown-content" id="s_to-currency-list">
+                    <li id="s_KRW"><img class="flag-img"
+                            src="	https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" />KRW</li>
+                    <li id="s_USD"><img class="flag-img"
+                            src="https://cdn-icons-png.flaticon.com/512/555/555526.png" />USD</li>
+                </ul>
+            </div>
+            <div class="s_input-box">
+                <input type="text" class="amount-box" id="s_toAmount" onkeyup="convert('s_to')"
+                    placeholder="금액을 입력하세요" />
+                <div id="s_toNumToKorea" class="korean-num">달러</div>
+            </div>
         </div>
     </div>
-    
+    <div class="side_weather">
+        <div class="l_box">
+            <div class="s_CurrIcon"></div>
+        </div>
+        <div class="r_box">
+            <div class="s_CurrTemp"></div>
+            <div class="s_city"></div>
+        </div>
+    </div>
+</div>

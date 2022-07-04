@@ -4,12 +4,11 @@
     text-align: center;
 }
 
-.sub_visual .orora{
+.sub_visual .orora {
     background-image: url(../img/sub_notice/orora.jpg);
     background-position: center center;
     background-size: 100%;
 }
-
 
 #sidemenu ul #navy2 a{  
     color: #edbd03;

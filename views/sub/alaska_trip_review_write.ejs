@@ -12,11 +12,11 @@
         </div>
         <div class="write_t_wrap">
             <a href="trip_review">목록</a>
-        </div>  
+        </div>
         <% if(typeof errs !== 'undefined') { %>
-            <% errs.forEach(() => { %>
-                <h3><%err.param%> : <%=err.msg%></h3>
-            <%})%>
+        <% errs.forEach(() => { %>
+        <h3><%err.param%> : <%=err.msg%></h3>
+        <%})%>
         <%}%> 
         <form class="write_table" method="POST" action="aReview">
             <table border="1" id="w_table">
@@ -78,4 +78,3 @@
                       
     </div>
 </div>
-

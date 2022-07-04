@@ -1,23 +1,22 @@
-
-        <div class="sub_visual">
-            <div class="bg orora">
-                <p class="title">고객센터</p>
-                <p class="txt">내가 꿈꾸던 여행지를 현실에서 만나세요!</p>
-            </div>
+<div class="sub_visual">
+    <div class="bg orora">
+        <p class="title">고객센터</p>
+        <p class="txt">내가 꿈꾸던 여행지를 현실에서 만나세요!</p>
+    </div>
+</div>
+<div class="w1200 content_box">
+    <div id="content">
+        <div class="subpg_title_wrap">
+            <h2 class="subpg_title">공지사항</h2>
         </div>
-        <div class="w1200 content_box">
-            <div id="content">
-                <div class="subpg_title_wrap">
-                    <h2 class="subpg_title">공지사항</h2>
-                </div>
-                <div class="write_t_wrap">
-                    <a href="notice">목록</a>
-                </div> 
-                <% if(typeof errs !== 'undefined') { %>
-                    <% errs.forEach(() => { %>
-                        <h3><%err.param%> : <%=err.msg%></h3>
-                    <%})%>
-                <%}%>
+        <div class="write_t_wrap">
+            <a href="notice">목록</a>
+        </div>
+        <% if(typeof errs !== 'undefined') { %>
+        <% errs.forEach(() => { %>
+        <h3><%err.param%> : <%=err.msg%></h3>
+        <%})%>
+        <%}%>
                 <form class="write_table" method="POST" action="aNotice">
                     <table border="1" id="w_table">
                         <colgroup>

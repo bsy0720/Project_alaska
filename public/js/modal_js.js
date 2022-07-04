@@ -1,6 +1,3 @@
-
-
-
 var btn = document.querySelectorAll("button.trip_btn_more");
 
 // All page modals
@@ -38,11 +35,11 @@ window.onclick = function (event) {
 
 
 var swiper = new Swiper(".mySwiper", {
-pagination: {
-el: ".swiper-pagination",
-clickable: true,
-renderBullet: function (index, className) {
-return '<span class="' + className + '">' + (index + 1) + "</span>";
-},
-},
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + "</span>";
+        },
+    },
 });

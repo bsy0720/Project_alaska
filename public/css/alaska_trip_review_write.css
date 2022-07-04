@@ -1,10 +1,10 @@
-.subpg_sec h1{
+.subpg_sec h1 {
     font-size: 28px;
     font-weight: 900;
     text-align: center;
 }
 
-.sub_visual .map{
+.sub_visual .map {
     background-image: url(../img/sub_trip_review/youtube_ban.jpg)
 }
 
@@ -49,7 +49,7 @@
     margin-right: 10px;
 }
 
-.write_btn_wrap{
+.write_btn_wrap {
     width: 100%;
     height: 40px;
     line-height: 40px;
@@ -88,14 +88,14 @@
 #w_table th {
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    background-color: #f7f7f7; 
+    background-color: #f7f7f7;
     font-size: 16px;
     font-weight: 600;
-    color: #111;   
+    color: #111;
     padding: 15px 20px;
     line-height: 23px;
     text-align: center;
-    
+
 }
 
 #w_table .impt {
@@ -138,7 +138,7 @@
     outline: none;
 }
 
-.form_text>textarea { 
+.form_text>textarea {
     height: 300px;
     resize: none;
     padding: 15px;
@@ -153,16 +153,16 @@
 
 
 @media only screen and (max-width: 900px) {
-   .write_table {
-       width: 100%;
-   }
+    .write_table {
+        width: 100%;
+    }
 
-   
+
 
 }
 
 @media only screen and (max-width: 720px) {
-   
+
     #w_table th {
         font-size: 14px;
         padding: 15px 5px;

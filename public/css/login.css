@@ -1,36 +1,41 @@
-
-.login_wrap{
+.login_wrap {
     width: 600px;
     padding: 70px 20px;
     box-sizing: border-box;
     margin: auto;
 }
-.login_wrap>a{
+
+.login_wrap>a {
     text-align: right;
     color: #072f49;
     width: 25px;
     height: 25px;
 }
-.login_title{
+
+.login_title {
     text-align: center;
     margin-bottom: 20px;
 }
-.login_title>h1{
+
+.login_title>h1 {
     font-size: 40px;
     color: #000;
     font-weight: 900;
     margin-bottom: 10px;
 }
-.login_title>strong{
+
+.login_title>strong {
     font-size: 16px;
     color: #072f49;
     font-weight: bold;
 }
-.wsf-field{
+
+.wsf-field {
     align-items: center;
     margin-bottom: 18px;
 }
-.wsf-input-text{
+
+.wsf-input-text {
     display: block;
     width: 100%;
     box-sizing: border-box;
@@ -41,13 +46,15 @@
     flex-grow: 1;
     line-height: 1.5;
 }
-.wsf-input-error{
+
+.wsf-input-error {
     display: none;
     color: #ff0e00;
     font-size: 14px;
     margin-top: 6px;
 }
-.wsf-field button{
+
+.wsf-field button {
     font-size: 18px;
     width: 100%;
     height: 100%;
@@ -61,22 +68,26 @@
     cursor: pointer;
     margin-top: 20px;
 }
-.login_utill_wrap{
+
+.login_utill_wrap {
     width: 90%;
     display: flex;
     justify-content: space-between;
     margin: auto;
-    padding-top:20px ;
+    padding-top: 20px;
 }
-.login_utill_wrap>li{
+
+.login_utill_wrap>li {
     width: 33.3333333%;
     border-right: 1px black solid;
     text-align: center;
 }
-.login_utill_wrap>li:last-child{
+
+.login_utill_wrap>li:last-child {
     border: none;
 }
-.login_utill_wrap a{
+
+.login_utill_wrap a {
     padding: 5px 10px;
     box-sizing: border-box;
     font-size: 18px;
@@ -88,36 +99,44 @@
 
 
 @media only screen and (max-width: 720px) {
-    .blue_wrap{
+    .blue_wrap {
         display: block;
     }
-    .login_title>h1{
+
+    .login_title>h1 {
         font-size: 40px;
     }
-    .login_title>strong{
+
+    .login_title>strong {
         font-size: 20px;
-    }    
-    .wsf-input-text{
+    }
+
+    .wsf-input-text {
         font-size: 16px;
     }
-    .wsf-field button{
+
+    .wsf-field button {
         font-size: 16px;
     }
-    .login_utill_wrap{
+
+    .login_utill_wrap {
         width: 100%;
     }
-    .login_utill_wrap a{
+
+    .login_utill_wrap a {
         font-size: 14px;
     }
-    
+
 }
+
 @media only screen and (max-width: 640px) {
-    .login_wrap{
-        width: 100%;        
+    .login_wrap {
+        width: 100%;
         padding: 50px 0px;
     }
-    .login_utill_wrap a{
+
+    .login_utill_wrap a {
         padding: 5px 0;
     }
-    
+
 }

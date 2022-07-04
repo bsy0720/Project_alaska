@@ -5,7 +5,7 @@
     </div>
 </div>
 <div class="w1200 content_box">
-    
+
     <div id="content">
         <div class="subpg_title_wrap">
             <h2 class="subpg_title">공지사항</h2>
@@ -16,11 +16,11 @@
             </div>
         </section>
         <section id="np_table_wrap">
-            <table id="np_table">                        
+            <table id="np_table">
                 <thead>
                     <tr>
                         <th class="n_blue">
-                            <span> <%= row.title%></span>                                  
+                            <span> <%= row.title%></span>
                         </th>
                     </tr>
                 </thead>
@@ -38,24 +38,24 @@
                         </td>
                     </tr>
                     <% if(typeof errs !== 'undefined'){ %>
-                        <%errs.forEach(()=>{%>
-                            <h3><%=err.param%> : <%=err.msg%></h3>
-                        <%})%>
+                    <%errs.forEach(()=>{%>
+                    <h3><%=err.param%> : <%=err.msg%></h3>
+                    <%})%>
                     <%}%>
                     <tr>
                         <td id="txt_box">
                             <%= row.content%>
-                        </td>
+                    </td>
                     </tr>
                 </tbody>
             </table>
-            
+
             </form>
-        </section>                  
+        </section>
         <section id="np_b_txtbox">
             <div class="np_b_up">
-               <p>이전글</p>
-               <sapn><a href="#">없음</a></sapn>
+                <p>이전글</p>
+                <sapn><a href="#">없음</a></sapn>
             </div>
             <div class="np_b_down">
                 <p>다음글</p>
@@ -64,8 +64,7 @@
         </section>
         <div class="nd_btn">
             <input type="button" value="수정" onclick="javascript:location.href='/NewNotice?id=<%=row.id%>'">
-            <input type="button" value="삭제" onclick="javascript:location.href='/deleteNotice?id=<%=row.id%>'">       
-        </div>                    
+            <input type="button" value="삭제" onclick="javascript:location.href='/deleteNotice?id=<%=row.id%>'">
+        </div>
     </div>
 </div>
-
