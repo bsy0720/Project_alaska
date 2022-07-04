@@ -61,6 +61,8 @@ function deleteNoticeById(id, callback) {
 
 
 
+
+
 //리스트 전체 부르기(여행문의)
 function getAllQna(callback) {
   connection.query('SELECT * FROM (SELECT *, @rownum:=@rownum+1 AS RNUM FROM qna, (SELECT @rownum :=0 as R)NUM)SUB ORDER BY id DESC;', (err, rows, fields) => {

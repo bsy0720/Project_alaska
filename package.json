@@ -11,13 +11,14 @@
     "express-validator": "^6.14.1",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "static": "^2.0.0"
+    "static": "^2.0.0",
+    "vuesax": "^4.0.1-alpha.25"
   },
   "name": "project1",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start":"node ./bin/www.js",
+    "start": "node ./bin/www.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

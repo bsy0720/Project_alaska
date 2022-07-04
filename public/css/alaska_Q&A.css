@@ -148,7 +148,7 @@ tbody .imp {
     width: 30px;
     height: 30px;
     position: absolute;
-    right: 56%;
+    right: 52%;
 }
 
 .m_b_number .n_right {
@@ -156,7 +156,7 @@ tbody .imp {
     width: 30px;
     height: 30px;
     position: absolute;
-    left: 56%;
+    left: 52%;
 }
 
 .m_b_number>a {
@@ -167,7 +167,6 @@ tbody .imp {
 .m_b_number .b_number {
     color: #1351A5;
     border-bottom: 2px solid #1351A5;
-    margin-right: 10px;
 }
 
 .mb_n_table_wrap {
